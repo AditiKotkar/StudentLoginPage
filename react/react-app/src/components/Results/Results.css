@@ -1,0 +1,15 @@
+.Resultcontent{
+    background: #F0F3F8;
+}
+.Results{
+    height: 37px;
+    background: #FFFFFF;
+    margin-top: 30px;
+}
+.Results h1{
+    fontfamily: Roboto Flex;
+    font-size: 14px;
+    font-weight: 400;
+    color: #BFBFBF;
+    padding: 5px 5%;
+}
