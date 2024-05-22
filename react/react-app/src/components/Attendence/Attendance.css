@@ -109,8 +109,8 @@
   width: 40px;
 }
 .react-calendar__tile.weekday {
-  background-color: green;
-  color: white;
+  background: white;
+  color: #000000;
 }
 .react-calendar__tile.sunday {
   background-color: red;
@@ -120,8 +120,8 @@
   background-color: red;
 }
 .react-calendar__tile.saturday {
-  background-color: green;
-  color: white; 
+  background: white;
+  color: #000000;
 }
 
 .react-calendar__tile.absent {
@@ -133,13 +133,35 @@
 }
 .react-calendar__tile:enabled:hover {
   cursor: pointer;
-  background: green;
-  color: #FFFFFF;
+  background: white;
+  color: #000000;
 }
 .react-calendar button{
   margin: 3px 3px 3px 0px;
 }
-
+.Absentmodal-content{
+  background-color: #FFFFFF;
+  width: 320px;
+  height: 140px ;
+  padding: 5px 20px 20px 20px ;
+  margin: 0px 20px 0px 15%;
+  border-radius: 5px;
+  box-shadow: 0px 4px 22px 0px #1A6EFC66;
+}
+.Absentmodal-content h2{
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+.Absentmodal-content button{
+  margin: 5px 40px;
+  width: 60px;
+  padding: 5px;
+}
+.no-absent-message h1{
+  align-items: center;
+  text-align: center;
+}
 @media screen and (min-width:700px ) and (max-width:800) {
   .Attendancedays{
     width: 654px;
@@ -148,6 +170,9 @@
     width: 554px;
     align-items: center;
     justify-content: center;
+  }
+  .Absentmodal-content{
+    margin: 0px 20px 0px 35%;
   }
 }
 @media screen and (min-width:700px ) and (max-width:800) {
@@ -165,10 +190,13 @@
     display: flex;
   }
   .Attendancedays{
-    margin: 0px 110px 80px 140px;
+    margin: 40px 110px 80px 140px;
   }
   .attendancere{
     width: 320px;
     margin: 30px 190px 0px 0px;
+  }
+  .Absentmodal-content{
+    margin: 0px 20px 0px 35%;
   }
   }
