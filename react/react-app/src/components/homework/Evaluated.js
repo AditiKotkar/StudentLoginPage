@@ -37,43 +37,9 @@ function Evaluated () {
                 </div>
             </div>
         </div>
-
         <div className="EvaluatedLine">
             <div className="Evaluatedline"></div>
         </div>
-
-        <div className="Evaluatedhome">
-            <div className="Evaluatedhomework">
-                <h1>Home work</h1>
-            </div>
-            <div className="Evaluatedboxes">
-                <div className="Evaluatedbox1">
-                    <h1>English</h1>
-                    <h2>Essay about Cherry</h2>
-                    <div className="Evaluatedbuton">
-                        <div className="Evaluatedview">
-                            <span>VIEW</span>
-                        </div>
-                        <h1>50 Submitted</h1>
-                    </div>
-                </div>
-                <div className="Evaluatedbox1">
-                    <h1>English</h1>
-                    <h2>Essay about Cherry</h2>
-                    <div className="Evaluatedbuton">
-                        <div className="Evaluatedview">
-                            <span>VIEW</span>
-                        </div>
-                        <h1>50 Submitted</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div className="EvaluatedLine">
-        <div className="Evaluatedline"></div>
-        </div>
-
     </div>      
   );
 }
