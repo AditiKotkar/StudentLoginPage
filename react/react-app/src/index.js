@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -15,15 +16,16 @@ import Attendancecal from './components/Attendence/Attendancecal';
 import Feedback from './components/Feedback/Feedback';
 import Report from './components/Report/Report';
 import Results from './components/Results/Results';
+import EventCalender from './components/EventCalender/EventCalender';
+import Project from './components/EventCalender/Project';
 import 'react-calendar/dist/Calendar.css';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<StudentLogin />} /> 
-      <Route path='student' element={<StudentDashbord />} />
-      <Route path='profile' element={<Profilepage />} />
+      <Route path="student" element={<StudentDashbord />} />
+      <Route path="profile" element={<Profilepage />} />
       <Route path="home" element={<Homework />} />
       <Route path="mainsub" element={<Mainsub />} />
       <Route path="Syllabus" element={<Syllabus />} />
@@ -33,6 +35,8 @@ root.render(
       <Route path="Feedback" element={<Feedback/>}/>
       <Route path="Report" element={<Report/>}/>
       <Route path="Results" element={<Results/>}/>
+      <Route path="EventCalender" element={<EventCalender />}/>
+      <Route path="Project" element={<Project />} />
     </Routes>
   </BrowserRouter>
 );
