@@ -18,14 +18,11 @@
 }
 .Reportresult{
     display: flex;
-    border: 1px solid #D9DBE0;
-    /* width: 402px; */
     height: 339px;
     border-radius: 20px;
     border: 1px 0px 0px 0px;
     opacity: 0px;
     margin-top: 20px;
-    background: #ffffff;
 }
 .ReportSubjects{
     background: #FAFFEE;
@@ -88,7 +85,7 @@
     font-size: 15px;
     font-weight: 600;
     list-style: none;
-    padding: 9px 22px;
+    padding: 9px 30px;
 }
 .percentage-contener{
     display: flex;
@@ -98,11 +95,17 @@
 fontfamily: Roboto Flex;
 font-size: 20px;
 font-weight: 500;
-width: 105px;
+width: 120px;
+}
+.recharts-wrapper{
+    margin:0px 1px 0px 0px ;
+    width: 300px;
+    height: 200px;
+    font-size: 12px;
 }
 .Reportright{
     display: flex;
-    margin: 30px 0px 0px 45%;
+    margin: 90px 0px 0px 0px;
 }
 .RCparple, .RCgreen, .RCBlue, .RCred, .RCblue, .RCpink, .RCg, .RCyello{
     width: 13px;
@@ -301,4 +304,36 @@ width: 105px;
     fontfamily: Roboto Flex;
     font-size: 13px;
     margin:10px 0px 0px 4%;
+}
+@media screen and (min-width:700px ) {
+.Reportresult{
+    padding: 0px 2%;
+}
+.ReportSubjects li , .ReportSubjects1 li, .ReportSubjects2 li{
+    color: #000000;
+    fontfamily: Roboto Flex;
+    font-size: 15px;
+    font-weight: 600;
+    list-style: none;
+    padding: 9px 35%;
+}
+.ReportSubjects h1, .ReportSubjects1 h1, .ReportSubjects2 h1 {
+    padding: 9px 35%;
+}
+.Reportperformanceleft p{
+   width: 300px;
+}
+.Reportperformanceleft li{
+    width: 150%;
+    padding-left: 40%;
+}
+.Reportperformanceright{
+    padding: 0px 0px 0px 45%;
+}
+.recharts-surface{
+   padding-right: 30%;
+}
+.Reportright{
+    padding-right: 20%;
+}
 }
