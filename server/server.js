@@ -33,6 +33,25 @@ connection.connect((error) => {
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
+app.post("/checkCollegeCode", (req, res) => {
+  const { collegeCode } = req.body;
+  if (!collegeCode) {
+    return res.status(400).send("College code is required");
+  }
+  connection.query(
+    "SELECT * FROM colleges WHERE college_code = ?",
+    [collegeCode],
+    (err, results) => {
+      if (err) {
+        res.status(500).send("Error checking college code");
+      } else if (results.length === 0) {
+        res.status(400).send("Invalid college code");
+      } else {
+        res.status(200).send("Valid college code");
+      }
+    }
+  );
+});
 
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
