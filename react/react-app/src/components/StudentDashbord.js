@@ -77,12 +77,14 @@ const StudentDashbord = () => {
             <h1>Syllabus</h1>
         </div>
         </Link>
+         <Link to="/Chatbox">
         <div className="contener">
             <div className="img">
                 <img src={chat} alt="Chat" />
             </div>
             <h1>Chat Option</h1>
-        </div>  
+        </div>
+        </Link> 
         <Link to="/Attendancecal"> 
         <div className="contener">
             <div className="img">
