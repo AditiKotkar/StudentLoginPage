@@ -17,6 +17,8 @@ import Attendancecal from './components/Attendence/Attendancecal';
 import Feedback from './components/Feedback/Feedback';
 import Report from './components/Report/Report';
 import 'react-calendar/dist/Calendar.css';
+import Chat from './components/Chat/Chat';
+import Chatbox from './components/Chat/Chatbox';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
@@ -33,6 +35,8 @@ root.render(
       <Route path="Attendancecal" element={<Attendancecal />} />
       <Route path="Feedback" element={<Feedback/>}/>
       <Route path="Report" element={<Report/>}/>
+      <Route path="Chat" element={<Chat/>}/>
+      <Route path="Chatbox" element={<Chatbox/>
     </Routes>
   </BrowserRouter>
 );
