@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import google from './images/google 1.png';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function StudentLogin() {
@@ -50,10 +51,12 @@ function StudentLogin() {
           <div className='circle-9'> {selectedBox === 'Parent' && <FontAwesomeIcon icon={faCheck} className='checkIcon-9' />}</div>
           <h1 className='boxname-9'>Parent</h1>
         </div>
+        <Link to="/Teacher">
         <div className={`box-9 ${selectedBox === 'Staff' ? 'selected' : ''}`} onClick={() => handleBoxClick('Staff')}>
           <div className='circle-9'> {selectedBox === 'Staff' && <FontAwesomeIcon icon={faCheck} className='checkIcon-9' />}</div>
           <h1 className='boxname-9'>Staff</h1>
         </div>
+        </Link>
       </div>
       <div className='form-9'>
         <input
