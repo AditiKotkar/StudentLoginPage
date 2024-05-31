@@ -7,9 +7,14 @@ import Evaluated from './Evaluated';
 
 function Mainsub () {
   const [activeTab, setActiveTab] = useState('Pending');
+  
   const handleTabChange = (tabName) => {
     setActiveTab(tabName);
   }
+  const [selectedBox, setSelectedBox] = useState('Pending');
+  const handleBoxClick = (boxName) => {
+    setSelectedBox(boxName);
+  };
   return (
     <div className="maincontener">
     <div className="maincontener1">
@@ -20,14 +25,14 @@ function Mainsub () {
     </div>
     <div className="mainbut1">
         <div className="mainbuttons1">
-            <div>
-            <span className={activeTab === 'Pending' ? 'active pending' : 'hoverButton'} onClick={() => handleTabChange('Pending')}>Pending</span>
+            <div className= {`div ${selectedBox === 'Pending' ? 'selected Pending' : ''}`} onClick={() => {handleTabChange('Pending'); handleBoxClick('Pending');}}>
+            <span className={`tab-button ${activeTab === 'Pending' ? 'active' : ''}`}>Pending</span>
             </div>
-            <div>
-            <span className={activeTab === 'Submitted' ? 'active submitted' : 'hoverButton'} onClick={() => handleTabChange('Submitted')}>Submitted</span>
+            <div className= {`div ${selectedBox === 'Submitted' ? 'selected Submitted' : ''}`} onClick={() => {handleTabChange('Submitted'); handleBoxClick('Submitted');}}>
+            <span className={`tab-button ${activeTab === 'Submitted' ? 'active' : ''}`}>Submitted</span>
             </div>
-            <div>
-            <span className={activeTab === 'Evaluated' ? 'active evaluated' : 'hoverButton'} onClick={() => handleTabChange('Evaluated')}>Evaluated</span>
+            <div className= {`div ${selectedBox === 'Evaluated' ? 'selected Evaluated' : ''}`} onClick={() => {handleTabChange('Evaluated'); handleBoxClick('Evaluated');}}>
+            <span className={`tab-button ${activeTab === 'Evaluated' ? 'active' : ''}`}>Evaluated</span>
             </div>
         </div>
     </div>
