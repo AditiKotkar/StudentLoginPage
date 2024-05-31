@@ -54,23 +54,18 @@
     align-items: center;
     justify-content:center ;
   }
-   .mainbuttons1 div:hover {
-    border: 2px solid #ea1212;
+.selected.Pending{
     background: #ea1212;
     color: #fff;
   }
-  
-  .mainbuttons1 div.pending:hover {
-    background-color: #ea1212;
+  .selected.Submitted{
+    background: #046B3A;
+    color: #fff;
   }
-  
-  .mainbuttons1 div.submitted:hover {
-    background-color: #046b3a;
+  .selected.Evaluated{
+    background: #1A6EFC;
+    color: #fff;
   }
-  
-  .mainbuttons1 div.hoverButton.active.evaluated {
-    background-color: #1a6efc;
-  } 
   @media screen and (min-width:700px ) {
     .maincontener{
       width: 100%;
