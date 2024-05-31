@@ -14,6 +14,7 @@ function StudentLogin() {
   const navigate = useNavigate();
   const handleSignIn = async (e) => {
     e.preventDefault();
+    const loginEndpoint = selectedBox === 'Student' ? '/login' : `/${selectedBox.toLowerCase()}-login`;
     try {
       const response = await fetch('http://localhost:3001/login', {
         method: 'POST',
@@ -24,7 +25,7 @@ function StudentLogin() {
       });
       const data = await response.text();
       if (response.ok) {
-        navigate('/student');
+        navigate(`/${selectedBox.toLowerCase()}`);
       } else {
         alert(data); 
       }
@@ -33,7 +34,7 @@ function StudentLogin() {
     }
   };
 
-  const [selectedBox, setSelectedBox] = useState(null);
+  const [selectedBox, setSelectedBox] = useState('Student');
   const handleBoxClick = (boxName) => {
     setSelectedBox(boxName);
   };
@@ -51,29 +52,15 @@ function StudentLogin() {
           <div className='circle-9'> {selectedBox === 'Parent' && <FontAwesomeIcon icon={faCheck} className='checkIcon-9' />}</div>
           <h1 className='boxname-9'>Parent</h1>
         </div>
-        <Link to="/Teacher">
         <div className={`box-9 ${selectedBox === 'Staff' ? 'selected' : ''}`} onClick={() => handleBoxClick('Staff')}>
           <div className='circle-9'> {selectedBox === 'Staff' && <FontAwesomeIcon icon={faCheck} className='checkIcon-9' />}</div>
           <h1 className='boxname-9'>Staff</h1>
         </div>
-        </Link>
       </div>
       <div className='form-9'>
-        <input
-        className='user-9'
-          type="text"
-          placeholder="Username (Mobile/Email)"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+        <input className='user-9' type="text" placeholder="Username (Mobile/Email)" value={username} onChange={(e) => setUsername(e.target.value)} />
         <div className='line-9'></div>
-        <input
-        className='user-9'
-          type="password"
-          placeholder="Password/OTP"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <input className='user-9' type="password" placeholder="Password/OTP" value={password} onChange={(e) => setPassword(e.target.value)}/>
         <div className='line-9'></div>
         <h1 className='school-9'>Forget Password?</h1>
       </div>
